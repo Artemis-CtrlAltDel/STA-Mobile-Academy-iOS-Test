@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A3D7B5A29E0697000C04880 /* TodoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7B5829E0697000C04880 /* TodoModel.xcdatamodeld */; };
+		3A3D7B5C29E06A4400C04880 /* DataCoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7B5B29E06A4400C04880 /* DataCoreManager.swift */; };
+		3A3D7B6229E0741900C04880 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7B6129E0741900C04880 /* EmptyView.swift */; };
+		3A3D7B6429E07B8200C04880 /* AddCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7B6329E07B8200C04880 /* AddCategoryView.swift */; };
+		3A3D7B6829E082D500C04880 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7B6729E082D500C04880 /* CategoryViewModel.swift */; };
+		3A3D7B6B29E08B2400C04880 /* XUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7B6A29E08B2400C04880 /* XUtils.swift */; };
+		3A3D7B6D29E0909700C04880 /* EnumUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7B6C29E0909700C04880 /* EnumUtils.swift */; };
+		3A3D7B7129E09D4E00C04880 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7B7029E09D4E00C04880 /* TodoView.swift */; };
+		3A3D7B7329E0A03A00C04880 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7B7229E0A03A00C04880 /* AddTodoView.swift */; };
+		3A3D7B7529E0A04800C04880 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7B7429E0A04800C04880 /* TodoViewModel.swift */; };
+		3A3D7B7729E0CDD600C04880 /* NotifUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D7B7629E0CDD600C04880 /* NotifUtils.swift */; };
 		3A94D58D29E052EC00A64C96 /* STA_Mobile_academy_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A94D58C29E052EC00A64C96 /* STA_Mobile_academy_iOSApp.swift */; };
 		3A94D58F29E052EC00A64C96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A94D58E29E052EC00A64C96 /* ContentView.swift */; };
 		3A94D59129E052EE00A64C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A94D59029E052EE00A64C96 /* Assets.xcassets */; };
@@ -14,6 +25,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A3D7B5929E0697000C04880 /* TodoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoModel.xcdatamodel; sourceTree = "<group>"; };
+		3A3D7B5B29E06A4400C04880 /* DataCoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoreManager.swift; sourceTree = "<group>"; };
+		3A3D7B6129E0741900C04880 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		3A3D7B6329E07B8200C04880 /* AddCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryView.swift; sourceTree = "<group>"; };
+		3A3D7B6729E082D500C04880 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		3A3D7B6A29E08B2400C04880 /* XUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XUtils.swift; sourceTree = "<group>"; };
+		3A3D7B6C29E0909700C04880 /* EnumUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumUtils.swift; sourceTree = "<group>"; };
+		3A3D7B7029E09D4E00C04880 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
+		3A3D7B7229E0A03A00C04880 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		3A3D7B7429E0A04800C04880 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
+		3A3D7B7629E0CDD600C04880 /* NotifUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifUtils.swift; sourceTree = "<group>"; };
 		3A94D58929E052EC00A64C96 /* STA_Mobile academy-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STA_Mobile academy-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A94D58C29E052EC00A64C96 /* STA_Mobile_academy_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STA_Mobile_academy_iOSApp.swift; sourceTree = "<group>"; };
 		3A94D58E29E052EC00A64C96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +54,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A3D7B5629E0694600C04880 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D7B6029E0710C00C04880 /* viewmodel */,
+				3A3D7B5F29E0710400C04880 /* view */,
+				3A94D58C29E052EC00A64C96 /* STA_Mobile_academy_iOSApp.swift */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		3A3D7B5729E0695700C04880 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D7B5829E0697000C04880 /* TodoModel.xcdatamodeld */,
+				3A3D7B5B29E06A4400C04880 /* DataCoreManager.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		3A3D7B5F29E0710400C04880 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D7B6F29E09C5D00C04880 /* todo */,
+				3A3D7B6E29E09C4F00C04880 /* category */,
+				3A3D7B6129E0741900C04880 /* EmptyView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3A3D7B6029E0710C00C04880 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D7B6729E082D500C04880 /* CategoryViewModel.swift */,
+				3A3D7B7429E0A04800C04880 /* TodoViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		3A3D7B6929E08B1800C04880 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D7B6A29E08B2400C04880 /* XUtils.swift */,
+				3A3D7B6C29E0909700C04880 /* EnumUtils.swift */,
+				3A3D7B7629E0CDD600C04880 /* NotifUtils.swift */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		3A3D7B6E29E09C4F00C04880 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				3A94D58E29E052EC00A64C96 /* ContentView.swift */,
+				3A3D7B6329E07B8200C04880 /* AddCategoryView.swift */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		3A3D7B6F29E09C5D00C04880 /* todo */ = {
+			isa = PBXGroup;
+			children = (
+				3A3D7B7029E09D4E00C04880 /* TodoView.swift */,
+				3A3D7B7229E0A03A00C04880 /* AddTodoView.swift */,
+			);
+			path = todo;
+			sourceTree = "<group>";
+		};
 		3A94D58029E052EC00A64C96 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +139,9 @@
 		3A94D58B29E052EC00A64C96 /* STA_Mobile academy-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3A94D58C29E052EC00A64C96 /* STA_Mobile_academy_iOSApp.swift */,
-				3A94D58E29E052EC00A64C96 /* ContentView.swift */,
+				3A3D7B6929E08B1800C04880 /* other */,
+				3A3D7B5729E0695700C04880 /* data */,
+				3A3D7B5629E0694600C04880 /* presentation */,
 				3A94D59029E052EE00A64C96 /* Assets.xcassets */,
 				3A94D59229E052EE00A64C96 /* Preview Content */,
 			);
@@ -137,7 +226,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A3D7B7529E0A04800C04880 /* TodoViewModel.swift in Sources */,
+				3A3D7B6B29E08B2400C04880 /* XUtils.swift in Sources */,
+				3A3D7B6829E082D500C04880 /* CategoryViewModel.swift in Sources */,
+				3A3D7B7129E09D4E00C04880 /* TodoView.swift in Sources */,
+				3A3D7B6429E07B8200C04880 /* AddCategoryView.swift in Sources */,
 				3A94D58F29E052EC00A64C96 /* ContentView.swift in Sources */,
+				3A3D7B6D29E0909700C04880 /* EnumUtils.swift in Sources */,
+				3A3D7B7729E0CDD600C04880 /* NotifUtils.swift in Sources */,
+				3A3D7B7329E0A03A00C04880 /* AddTodoView.swift in Sources */,
+				3A3D7B6229E0741900C04880 /* EmptyView.swift in Sources */,
+				3A3D7B5A29E0697000C04880 /* TodoModel.xcdatamodeld in Sources */,
+				3A3D7B5C29E06A4400C04880 /* DataCoreManager.swift in Sources */,
 				3A94D58D29E052EC00A64C96 /* STA_Mobile_academy_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +437,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3A3D7B5829E0697000C04880 /* TodoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3A3D7B5929E0697000C04880 /* TodoModel.xcdatamodel */,
+			);
+			currentVersion = 3A3D7B5929E0697000C04880 /* TodoModel.xcdatamodel */;
+			path = TodoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3A94D58129E052EC00A64C96 /* Project object */;
 }
