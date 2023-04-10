@@ -11,8 +11,6 @@ import CoreData
 
 class TodoViewModel: ObservableObject {
     
-    let notifyUtils = NotificationUtils()
-    
     @Published
     var content = ""
     
@@ -25,6 +23,7 @@ class TodoViewModel: ObservableObject {
     func insert(category: Category, context: NSManagedObjectContext) {
         let todo = Todo(context: context)
         
+        todo.id = UUID()
         todo.content = content
         todo.remindAt = remindAt
         todo.canRemind = canRemind
@@ -44,24 +43,10 @@ class TodoViewModel: ObservableObject {
         save(context: context)
     }
     
-    // TODO fix
     func markAsDone(todo: Todo, context: NSManagedObjectContext) {
         todo.isDone.toggle()
         
         save(context: context)
-    }
-    
-    // TODO fix
-    func notify(category: Category, todo: Todo) {
-        if !canRemind || !notifyUtils.checkPermissions() {
-            return
-        }
-        
-        NotificationUtils().createNotification(
-            date: todo.remindAt ?? Date(),
-            title: category.name ?? "",
-            body: todo.content ?? ""
-        )
     }
     
     private func save(context:NSManagedObjectContext){

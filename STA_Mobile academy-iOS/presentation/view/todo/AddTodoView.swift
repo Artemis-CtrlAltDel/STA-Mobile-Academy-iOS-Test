@@ -46,7 +46,11 @@ struct AddTodoView: View {
                         Image(systemName: todoViewModel.canRemind ? "bell.and.waves.left.and.right.fill" : "bell")
                             .foregroundColor(.blue)
                             .onTapGesture {
-                                todoViewModel.canRemind.toggle()
+                                notifyUtils.checkPermissions()
+                                
+                                if notifyUtils.isPermitted {
+                                    todoViewModel.canRemind.toggle()
+                                }
                             }
                         
                     }
@@ -88,10 +92,23 @@ struct AddTodoView: View {
     private func submit() {
         if (!todoViewModel.content.trimAndRemoveSpaces(using: .whitespacesAndNewlines).isEmpty) {
             
+            notify(category: category)
             todoViewModel.insert(category: category,context: viewContext)
             addTodoClicked.toggle()
             
         }
+    }
+    
+    func notify(category: Category) {
+        if !todoViewModel.canRemind || !notifyUtils.isPermitted {
+            return
+        }
+        
+        NotificationUtils().createNotification(
+            date: todoViewModel.remindAt,
+            title: category.name!,
+            body: todoViewModel.content
+        )
     }
     
 }

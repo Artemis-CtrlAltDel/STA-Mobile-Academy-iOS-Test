@@ -10,21 +10,22 @@ import UserNotifications
 
 class NotificationUtils {
     
-    func checkPermissions() -> Bool {
+    private(set) var isPermitted = false
+    
+    func checkPermissions() {
         
-        var isPermitted = false
+        if self.isPermitted {
+            return
+        }
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
             
             if success {
-                isPermitted = true
+                self.isPermitted = true
             } else if let error = error {
-                isPermitted = false
                 print(error.localizedDescription)
             }
         }
-        
-        return isPermitted
     }
 
     

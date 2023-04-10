@@ -20,6 +20,6 @@ extension String {
 extension Todo {
     
     func isDisabled() -> Bool {
-        return self.isDone || self.remindAt! < Date()
+        return self.isDone || (self.remindAt ?? Date()) < Date()
     }
 }

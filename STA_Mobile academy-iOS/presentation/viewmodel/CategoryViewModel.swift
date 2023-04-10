@@ -17,6 +17,7 @@ class CategoryViewModel: ObservableObject {
     func insert(context: NSManagedObjectContext) {
         let category = Category(context: context)
         
+        category.id = UUID()
         category.name = name.trimAndRemoveSpaces(using: .whitespacesAndNewlines)
         category.createdAt = Date()
         

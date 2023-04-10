@@ -11,8 +11,6 @@ struct TodoView: View {
     
     var category: Category
     
-    private let notifyUtils = NotificationUtils()
-    
     @Environment(\.managedObjectContext)
     private var viewContext
     
