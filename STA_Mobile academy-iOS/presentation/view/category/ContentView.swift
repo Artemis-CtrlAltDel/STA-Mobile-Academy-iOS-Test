@@ -68,7 +68,7 @@ struct ContentView: View {
                                 Button(role: .destructive, action: {
                                     categoryViewModel.delete(category: category, context: viewContext)
                                 }, label: {
-                                    Label("", systemImage: "trash")
+                                    Image(systemName: "trash")
                                 })
                             }
                             
@@ -87,7 +87,7 @@ struct ContentView: View {
                     Button(action: {
                         addCategoryClicked.toggle()
                     }, label: {
-                        Label("", systemImage: "plus")
+                        Image(systemName: "plus")
                             .imageScale(.large)
                     })
                 }

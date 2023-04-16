@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct TodoView: View {
-    
+
     var category: Category
+    
+    private var fetchRequest: FetchRequest<Todo>
+    private var todoList: FetchedResults<Todo> {
+        fetchRequest.wrappedValue
+    }
+    
+    init(category: Category) {
+        self.category = category
+        
+        fetchRequest = FetchRequest(
+            sortDescriptors: [NSSortDescriptor(key: "remindAt", ascending: true)],
+            predicate: NSPredicate(format: "category.id == %@", category.id! as CVarArg)
+        )
+    }
     
     @Environment(\.managedObjectContext)
     private var viewContext
@@ -29,11 +43,11 @@ struct TodoView: View {
             
             VStack {
                 
-                if (category.todo?.allObjects as! [Todo]).isEmpty {
+                if todoList.isEmpty {
                     EmptyView(emptySource: $emptySource)
                 } else {
                     
-                    List(category.todo?.allObjects as! [Todo]) { todo in
+                    List(todoList) { todo in
                         
                         HStack {
                             
@@ -59,14 +73,14 @@ struct TodoView: View {
                             Button(role: .destructive, action: {
                                 todoViewModel.delete(todo: todo, context: viewContext)
                             }, label: {
-                                Label("", systemImage: "trash")
+                                Image(systemName: "trash")
                             })
                         }
                         .swipeActions(edge: .leading, allowsFullSwipe: true) {
                             Button(action: {
                                 todoViewModel.markAsDone(todo: todo, context: viewContext)
                             }, label: {
-                                todo.isDone ? Label("", systemImage: "minus.rectangle.portrait") : Label("", systemImage: "checkmark.rectangle.portrait")
+                                todo.isDone ? Image(systemName: "minus.rectangle.portrait") : Image(systemName: "checkmark.rectangle.portrait")
                             })
                             .tint(todo.isDone ? .orange : .green)
                             
@@ -86,7 +100,7 @@ struct TodoView: View {
                     Button(action: {
                         addTodoClicked.toggle()
                     }, label: {
-                        Label("", systemImage: "plus")
+                        Image(systemName: "plus")
                             .imageScale(.large)
                     })
                 }
