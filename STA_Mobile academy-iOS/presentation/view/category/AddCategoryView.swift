@@ -75,13 +75,3 @@ struct AddCategoryView: View {
         }
     }
 }
-
-struct AddCategoryView_Previews: PreviewProvider {
-    
-    @State
-    static var addCategoryClicked = true
-    
-    static var previews: some View {
-        AddCategoryView(addCategoryClicked: $addCategoryClicked)
-    }
-}
