@@ -63,12 +63,12 @@ struct TodoView: View {
                                     .frame(maxWidth: .infinity, alignment: .leading)
                             }
                             
-                            Image(systemName: todo.canRemind && !todo.isDisabled() ? "bell.and.waves.left.and.right.fill" : "")
+                            Image(systemName: todo.canRemind && !todo.isExpired() ? "bell.and.waves.left.and.right.fill" : "")
                                 .foregroundColor(.yellow)
                             
                         }
-                        .strikethrough(todo.isDisabled(), color: .green)
-                        .opacity(todo.isDisabled() ? 0.5 : 1)
+                        .strikethrough(todo.isExpired(), color: .green)
+                        .opacity(todo.isExpired() ? 0.5 : 1)
                         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                             Button(role: .destructive, action: {
                                 todoViewModel.delete(todo: todo, context: viewContext)
