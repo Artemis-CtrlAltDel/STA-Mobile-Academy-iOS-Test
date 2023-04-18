@@ -21,7 +21,10 @@ struct TodoView: View {
         
         fetchRequest = FetchRequest(
             sortDescriptors: [NSSortDescriptor(key: "remindAt", ascending: true)],
-            predicate: NSPredicate(format: "category.id == %@", category.id! as CVarArg)
+            predicate: NSPredicate(
+                format: "category.id == %@",
+                UUID(uuid: category.id?.uuid ?? UUID().uuid) as CVarArg
+            )
         )
     }
     
